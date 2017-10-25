@@ -2,6 +2,10 @@
 
 Solve Longest Common Subsequence Problem in Linear Space in Several Languages
 
+## Languages
+
+- Ruby
+
 ## Problem
 
 Given two sequences X =〈x<sub>1</sub>, x<sub>2</sub>, … , x<sub>m</sub>〉and Y = 〈y<sub>1</sub>, y<sub>2</sub>, … , y<sub>n</sub>〉, find a longest common subsequence of X and Y.
