@@ -16,7 +16,7 @@ First line contains an integer **T**, representing the number of testcases.
 In the next **T** lines, each line contains two string **X** and **Y**.
 
 - 2 ≤ T ≤ 20
-- 5 ≤ Length of X and Y ≤ 1,000
+- X and Y =~ `/^[A-Za-z0-9]{5,1000}$/`
 
 ### Output
 
