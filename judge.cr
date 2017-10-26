@@ -36,5 +36,8 @@ t.times do |i|
   end
 end
 
-puts "Passed" if pass
-exit 1 unless pass
+if pass
+  puts "Passed"
+else
+  exit 1
+end
