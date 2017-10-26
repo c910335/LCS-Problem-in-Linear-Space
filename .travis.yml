@@ -1,0 +1,5 @@
+language: crystal
+
+install: make clean build
+
+script: make test
