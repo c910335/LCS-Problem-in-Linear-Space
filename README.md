@@ -5,6 +5,7 @@ Solve Longest Common Subsequence Problem in Linear Space in Several Languages
 ## Languages
 
 - Ruby
+- Crystal
 
 ## Problem
 
