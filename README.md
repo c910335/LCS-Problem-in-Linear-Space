@@ -8,6 +8,7 @@ Solve Longest Common Subsequence Problem in Linear Space in Several Languages
 
 - Ruby
 - Crystal
+- C++ (C++17)
 
 ## Problem
 
@@ -53,3 +54,4 @@ ABAAB
 ## Contributors
 
 - [c910335](https://github.com/c910335) Tatsujin Chin - creator, maintainer
+- [david50407](https://github.com/david50407) David Kuo - C++17
