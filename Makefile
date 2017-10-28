@@ -1,5 +1,6 @@
 BIN_DIR=bin
 TMP_DIR=tmp
+CXX ?= clang++
 
 all: clean build
 
@@ -10,6 +11,7 @@ build:
 	mkdir $(BIN_DIR)
 	crystal build --release --no-debug judge.cr -o $(BIN_DIR)/judge
 	crystal build --release --no-debug main.cr -o $(BIN_DIR)/crystal
+	$(CXX) -std=c++17 -stdlib=libc++ -O2 -o$(BIN_DIR)/cpp main.cxx
 
 test:
 	mkdir $(TMP_DIR)
@@ -18,3 +20,5 @@ test:
 	@bin/judge $(TMP_DIR)/test_data.in $(TMP_DIR)/crystal.out
 	ruby main.rb < $(TMP_DIR)/test_data.in > $(TMP_DIR)/ruby.out
 	@bin/judge $(TMP_DIR)/test_data.in $(TMP_DIR)/ruby.out
+	$(BIN_DIR)/cpp < $(TMP_DIR)/test_data.in > $(TMP_DIR)/cpp.out
+	@bin/judge $(TMP_DIR)/test_data.in $(TMP_DIR)/cpp.out
