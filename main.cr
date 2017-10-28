@@ -10,10 +10,17 @@ def scores_between(xs : String, and ys : String = "") : Array(Int32)
   scores
 end
 
+def filter(text : String, by pattern : String) : String
+  if text.includes?(pattern)
+    pattern
+  else
+    ""
+  end
+end
+
 def lcs_of(xs : String, and ys : String = "") : String
-  return "" if xs.empty? || ys.empty?
-  return xs if xs.size == 1 && ys.includes?(xs)
-  return ys if ys.size == 1 && xs.includes?(ys)
+  return filter ys, by: xs if xs.size == 1
+  return filter xs, by: ys if ys.size == 1
 
   mid = xs.size / 2
   max_score, secant = scores_between(xs[0...mid], and: ys)

@@ -11,11 +11,18 @@ def scores_between(xs, options = { and: '' })
   scores
 end
 
+def filter(text, by: '')
+  if text.include?(by)
+    by
+  else
+    ""
+  end
+end
+
 def lcs_of(xs, options = { and: '' })
   ys = options[:and]
-  return '' if xs.empty? || ys.empty?
-  return xs if xs.size == 1 && ys.include?(xs)
-  return ys if ys.size == 1 && xs.include?(ys)
+  return filter ys, by: xs if xs.size == 1
+  return filter xs, by: ys if ys.size == 1
 
   mid = xs.size / 2
   max_score, secant = scores_between(xs[0...mid], and: ys)
