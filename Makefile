@@ -12,6 +12,7 @@ build:
 	crystal build --release --no-debug judge.cr -o $(BIN_DIR)/judge
 	crystal build --release --no-debug main.cr -o $(BIN_DIR)/crystal
 	$(CXX) -std=c++17 -stdlib=libc++ -O2 -o$(BIN_DIR)/cpp main.cxx
+	mcs main.cs -out:$(BIN_DIR)/csharp -optimize+
 
 test:
 	mkdir $(TMP_DIR)
@@ -22,3 +23,5 @@ test:
 	@bin/judge $(TMP_DIR)/test_data.in $(TMP_DIR)/ruby.out
 	$(BIN_DIR)/cpp < $(TMP_DIR)/test_data.in > $(TMP_DIR)/cpp.out
 	@bin/judge $(TMP_DIR)/test_data.in $(TMP_DIR)/cpp.out
+	mono $(BIN_DIR)/csharp < $(TMP_DIR)/test_data.in > $(TMP_DIR)/csharp.out
+	@bin/judge $(TMP_DIR)/test_data.in $(TMP_DIR)/csharp.out

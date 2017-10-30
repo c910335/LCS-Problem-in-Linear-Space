@@ -8,7 +8,7 @@ env:
 
 before_install:
   - brew update
-  - brew install llvm
+  - brew install llvm mono
 install: make clean build
 
 script: make test
