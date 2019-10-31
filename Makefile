@@ -11,7 +11,7 @@ build:
 	mkdir $(BIN_DIR)
 	crystal build --release --no-debug judge.cr -o $(BIN_DIR)/judge
 	crystal build --release --no-debug main.cr -o $(BIN_DIR)/crystal
-	$(CXX) -std=c++17 -stdlib=libc++ -O2 -o$(BIN_DIR)/cpp main.cxx
+	$(CXX) -std=c++17 -O2 -o $(BIN_DIR)/cpp main.cxx
 	mcs main.cs -out:$(BIN_DIR)/csharp -optimize+
 
 test:

@@ -22,7 +22,7 @@ def lcs_of(xs : String, and ys : String = "") : String
   return filter ys, by: xs if xs.size == 1
   return filter xs, by: ys if ys.size == 1
 
-  mid = xs.size / 2
+  mid = xs.size // 2
   max_score, secant = scores_between(xs[0...mid], and: ys)
     .zip(scores_between(xs[mid..-1].reverse, and: ys.reverse).reverse!)
     .map_with_index! { |scores, i| {scores.sum, i} }
