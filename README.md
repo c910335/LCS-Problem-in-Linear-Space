@@ -1,6 +1,6 @@
 # LCS Problem in Linear Space
 
-[![Build Status](https://travis-ci.org/c910335/LCS-Problem-in-Linear-Space.svg?branch=master)](https://travis-ci.org/c910335/LCS-Problem-in-Linear-Space)
+[![Build Status](https://travis-ci.com/c910335/LCS-Problem-in-Linear-Space.svg?branch=master)](https://travis-ci.com/c910335/LCS-Problem-in-Linear-Space)
 
 Solve Longest Common Subsequence Problem in Linear Space in Several Languages
 
